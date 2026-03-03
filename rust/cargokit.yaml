@@ -1,6 +1,9 @@
 cargo:
   release:
     toolchain: stable
-precompiled_binaries:
-  url_prefix: https://github.com/LtbLightning/bdk-flutter/releases/download/precompiled_
-  public_key: 0e43d5e8452d00db7f3000c18fb1ba796babfcb5dc6306bb0629eff24f8be85b
+# Commented out: upstream precompiled binaries are 4KB aligned (0x1000).
+# Google Play requires 16KB (0x4000). Building from source with NDK r28
+# produces correct alignment. Re-enable once upstream publishes 16KB-aligned builds.
+# precompiled_binaries:
+#   url_prefix: https://github.com/LtbLightning/bdk-flutter/releases/download/precompiled_
+#   public_key: 0e43d5e8452d00db7f3000c18fb1ba796babfcb5dc6306bb0629eff24f8be85b
